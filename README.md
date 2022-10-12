@@ -1,1 +1,1 @@
-# project_app_www_2022
+Projekt z przedmiotu Programowanie Aplikacji WWW
