@@ -1,0 +1,194 @@
+h5 {
+	margin-top: 90px;
+	font-size: 3em;
+	text-align: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+}
+
+/* LIST */
+
+main {
+	display: block;
+	margin: 0 auto;
+	max-width: 40rem;
+	padding: 1rem;
+}
+
+li h3 {
+	font-size: 2rem;
+	font-weight: 600;
+	background-image: linear-gradient(to left, #5213ff, #942d2d);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+ol.gradient-list {
+	list-style: none;
+	margin: 2rem 5rem;
+	padding-left: 1rem;
+}
+
+ol.gradient-list>li {
+	background: rgba(243, 196, 200, 0.603);
+	border-radius: 0 0.5rem 0.5rem 0.5rem;
+	counter-increment: gradient-counter;
+	margin-top: 0.5rem;
+	min-height: 2rem;
+	padding: 1rem 1rem 1rem 3rem;
+	position: relative;
+}
+
+ol.gradient-list>li::before,
+ol.gradient-list>li::after {
+	background: linear-gradient(160deg, #d195e0, #c43939);
+	border-radius: 2rem 1rem 0 1rem;
+	content: '';
+	height: 3rem;
+	left: -1rem;
+	overflow: hidden;
+	position: absolute;
+	top: -1rem;
+	width: 3rem;
+}
+
+ol.gradient-list>li::before {
+	align-items: flex-end;
+	content: counter(gradient-counter);
+	color: #1d1f20;
+	display: flex;
+	font: 900 1.5em/1 'Montserrat';
+	justify-content: flex-end;
+	padding: 0.125em 0.25em;
+	z-index: 1;
+}
+
+ol li {
+	margin: 50px 0;
+	letter-spacing: 1px;
+	font-size: 1.1rem;;
+}
+/* end LIST */
+
+/* table */
+
+.table-wrapper {
+	margin: 10px 70px 70px;
+	box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+	position: relative;
+	opacity: 0.95;
+}
+
+.fl-table {
+	border-radius: 5px;
+	font-size: 12px;
+	border: none;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 100%;
+	white-space: nowrap;
+	background-color: white;
+}
+
+.fl-table td,
+.fl-table th {
+	text-align: center;
+	padding: 8px;
+}
+
+.fl-table td {
+	border-right: 1px solid #f8f8f8;
+	font-size: 14px;
+}
+
+.fl-table thead th {
+	color: #ffffff;
+	background: #ca3d49;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+	color: #ffffff;
+	background: #324960;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+	.fl-table {
+		display: block;
+		width: 100%;
+	}
+
+	.table-wrapper:before {
+		content: "Przewijaj w bok >";
+		display: block;
+		text-align: right;
+		font-size: 11px;
+		color: white;
+		padding: 0 0 10px;
+	}
+
+	.fl-table thead,
+	.fl-table tbody,
+	.fl-table thead th {
+		display: block;
+	}
+
+	.fl-table thead th:last-child {
+		border-bottom: none;
+	}
+
+	.fl-table thead {
+		float: left;
+	}
+
+	.fl-table tbody {
+		width: auto;
+		position: relative;
+		overflow-x: auto;
+	}
+
+	.fl-table td,
+	.fl-table th {
+		padding: 20px .625em .625em .625em;
+		height: 60px;
+		vertical-align: middle;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		overflow-y: auto;
+		width: 120px;
+		font-size: 13px;
+		text-overflow: ellipsis;
+	}
+
+	.fl-table thead th {
+		text-align: left;
+		border-bottom: 1px solid #f7f7f9;
+	}
+
+	.fl-table tbody tr {
+		display: table-cell;
+	}
+
+	.fl-table tbody tr:nth-child(odd) {
+		background: none;
+	}
+
+	.fl-table tr:nth-child(even) {
+		background: transparent;
+	}
+
+	.fl-table tr td:nth-child(odd) {
+		background: #F8F8F8;
+		border-right: 1px solid #E6E4E4;
+	}
+
+	.fl-table tr td:nth-child(even) {
+		border-right: 1px solid #E6E4E4;
+	}
+
+	.fl-table tbody td {
+		display: block;
+		text-align: center;
+	}
+}
