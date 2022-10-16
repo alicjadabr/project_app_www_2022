@@ -21,6 +21,7 @@
       <li><a href="./rasy.html">Rasy</a></li>
       <li><a href="./galeria.html">Galeria</a></li>
       <li><a href="./dieta.html">Żywienie</a></li>
+      <li><a href="./etapy.html">Etapy życia</a></li>
       <li class="push"><a href="./kontakt.html">Kontakt</a></li>
     </ul>
   </nav>
@@ -28,43 +29,38 @@
   <div class="container-top zone">
     <img src="./img/contact.jpg" class="responsive-img">
   </div>
-  <div id="container">
+  <!--Contact form -->
+  <div class="contact_form">
     <h1>Kontakt</h1>
     <div class="underline">
     </div>
     <div class="icon_wrapper">
       <img src="/img/contact.svg" alt="sending">
     </div>
-    <form action="#" method="post" id="contact_form">
+    <form action="#" method="post" id="form-contact">
       <div class="name">
         <label for="name"></label>
-        <input type="text" placeholder="imię i nazwisko" name="name" id="name_input" required>
+        <input type="text" placeholder="Imię i nazwisko" name="name" id="name_input" required>
       </div>
       <div class="email">
         <label for="email"></label>
-        <input type="email" placeholder="e-mail" name="email" id="email_input" required>
-      </div>
-      <div class="telephone">
-        <label for="name"></label>
-        <input type="text" placeholder="numer" name="telephone" id="telephone_input" required>
+        <input type="email" placeholder="E-mail" name="email" id="email_input" required>
       </div>
       <div class="subject">
         <label for="subject"></label>
-        <input type="text" placeholder="temat" name="subject" id="subject_input" required>
+        <input type="text" placeholder="Temat" name="subject" id="subject_input" required>
       </div>
       <div class="message">
         <label for="message"></label>
         <textarea name="message" placeholder="Komentarz/Problem" id="message_input" cols="30" rows="5" required></textarea>
       </div>
-      <div class="submit">
-        <input type="submit" value="Wyślij" id="form_button" />
-      </div>
-      <div class="clear">
-        <input type="submit" value="Wyczyść" id="form_button" />
+      <div>
+        <input type="submit" value="Wyślij" class="form_button" />
+        <input type="button" value="Wyczyść" class="form_button" onclick="clearForm()" />
       </div>
     </form>
-    <!-- // End form -->
-  </div><!-- // End #container -->
+  </div>
+   <!-- End contact form -->
     <!--  FOOTER START -->
     <div class="footer">
       <div class="inner-footer">
@@ -134,7 +130,7 @@
       </div>
     </div>
     <!--   FOOTER END -->
-<script src="./kolorujtlo.js"></script>
+<script src="./script.js"></script>
 </body>
 
 </html>

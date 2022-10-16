@@ -50,18 +50,26 @@ body {
   margin: 0;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 750px) {
   .main-nav {
     font-size: 0.4em;
     padding: 0;
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .main-nav {
+    font-size: 0.3em;
+    padding: 0;
+  }
+}
+
+
 .push {
   margin-left: auto;
 }
 
-li {
+.main-nav li {
   cursor: pointer;
   padding: 16px;
   padding-right: 30px;
@@ -122,7 +130,13 @@ a {
 	list-style: none;
 	font-size: 1rem;
 	letter-spacing: 0.5px;	
- }
+}
+
+.footer li {
+	cursor: pointer;
+	padding: 16px;
+	padding-right: 30px;
+}
 
  .footer ul a {
 	text-decoration: none;

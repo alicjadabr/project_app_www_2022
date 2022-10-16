@@ -1,0 +1,84 @@
+h2 {
+  margin-top: 100px;
+  text-align:center;
+  font-size: 2.5em;
+}
+
+.timeline_list {
+  padding: 2em 2em;
+}
+
+.timeline_list li {
+  position:relative;
+  list-style-type: none;
+  width: 0.5em;
+  background-color: rgb(204, 204, 204);
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.timeline_list li::after {
+  background: white;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  }
+
+
+.timeline_list li div{
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 10px;
+  bottom: 0;
+  background: rgba(42,50,113, .28);
+}
+
+.timeline_list li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline_list li:nth-child(even) div {
+  left: -445px;
+}
+
+.year {
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.timeline_list li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.timeline_list li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline_list li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline_list li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline_list li div {
+    width: 250px;
+  }
+  .timeline_list li:nth-child(even) div {
+    left: -289px;
+  }
+}
