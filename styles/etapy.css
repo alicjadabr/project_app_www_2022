@@ -1,84 +1,85 @@
 h2 {
-  margin-top: 100px;
+  margin-top: 110px;
   text-align:center;
   font-size: 2.5em;
 }
 
-.timeline_list {
-  padding: 2em 2em;
+.wrapper{ 
+	max-width: 800px;
+	margin: auto;
+	margin-top: 80px;
+  margin-bottom: 80px;
+  font-size: 1.2em;
+}
+.tab-wrapper{ 
+	text-align: center;
+	display: block;
+	margin: auto;
+	max-width: 500px;
 }
 
-.timeline_list li {
-  position:relative;
-  list-style-type: none;
-  width: 0.5em;
-  background-color: rgb(204, 204, 204);
-  margin: 0 auto;
-  padding-top: 50px;
+.tabs{ 
+	margin: 0;  
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+.tab-head {
+	margin: 0 1%;
+	list-style: none;
+	padding: 10px 40px;
+	color: #aaa;
+	cursor: pointer;
+	font-weight: 700;
+	transition: all ease 0.5s;
+	border-bottom: solid 3px rgba(255,255,255,0.0);
+	letter-spacing: 1px;
 }
 
-.timeline_list li::after {
-  background: white;
-  content: '';
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  position:absolute;
-  left:50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  }
-
-
-.timeline_list li div{
-  position: relative;
-  width: 400px;
-  padding: 15px;
-  border-radius: 10px;
-  bottom: 0;
-  background: rgba(42,50,113, .28);
+.tab-head:hover {
+	color: #999;
+	border-color: #999;
+}
+.tab-head.active {
+	color: #333;
+	border-color: #333;
 }
 
-.timeline_list li:nth-child(odd) div {
-  left: 45px;
+.tab-head:nth-of-type(1).active{
+	color: #EE6534;
+	border-color: #EE6534;
 }
 
-.timeline_list li:nth-child(even) div {
-  left: -445px;
+.tab-head:nth-of-type(2).active{
+	color: #1790D2;
+	border-color: #1790D2;
 }
 
-.year {
-  font-weight: bold;
-  font-size: 1.5rem;
-  display: block;
-  margin-bottom: 5px;
+.tab-head:nth-of-type(3).active{
+	color: #EEC63B;
+	border-color: #EEC63B;
 }
 
-.timeline_list li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all .5s ease-in-out;
+.content-wrapper{
+	padding: 40px 80px;
 }
 
-.timeline_list li:nth-child(odd) div {
-  transform: translate3d(200px, 0, 0);
+.tab-content {
+	display: none;
+	text-align: center;
+	color: rgb(27, 19, 19);
+	font-weight: 700;
+	font-size: 0.9em;
+	opacity: 0;
+	transform: translateY(15px);
+	animation: fadeIn 2s ease 1 forwards;
 }
 
-.timeline_list li:nth-child(even) div {
-  transform: translate3d(-200px, 0, 0);
+.tab-content.active{
+	display: block;
 }
 
-.timeline_list li.show div {
-  transform: none;
-  visibility: visible;
-  opacity: 1;
-}
-
-@media screen and (max-width: 900px) {
-  .timeline_list li div {
-    width: 250px;
-  }
-  .timeline_list li:nth-child(even) div {
-    left: -289px;
-  }
-}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: none; } }
