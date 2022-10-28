@@ -22,7 +22,7 @@ li h3 {
 	-webkit-background-clip: text;
 }
 
-p {
+.gradient-list p {
 	display: none;
 }
 
