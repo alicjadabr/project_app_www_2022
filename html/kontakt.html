@@ -1,137 +1,41 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="Content-Language" content="pl" />
-  <meta name="Author" content="Alicja Dabrowska" />
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
-  <link rel="stylesheet" type="text/css" href="../css/kontakt.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/kontakt.css">
   <title>Kontakt</title>
 </head>
 
-<body>
-  <!-- Menu/Pasek nawigacyjny -->
-  <nav class="zone gradient sticky">
-    <ul class="main-nav">
-      <li><a href="../index.html">Start</a></li>
-      <li><a href="./rasy.html">Rasy</a></li>
-      <li><a href="./galeria.html">Galeria</a></li>
-      <li><a href="./dieta.html">Żywienie</a></li>
-      <li><a href="./etapy.html">Etapy życia</a></li>
-      <li class="push"><a href="./kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
-  <!--Koniec Menu/Pasek nawigacyjny -->
-  <div class="container-top zone">
-    <img src="../img/contact.jpg" class="responsive-img">
+<div class="container-top zone">
+  <img src="./img/contact.jpg" class="responsive-img">
+</div>
+<!--Contact form -->
+<div class="contact_form">
+  <h1>Kontakt</h1>
+  <div class="underline">
   </div>
-  <!--Contact form -->
-  <div class="contact_form">
-    <h1>Kontakt</h1>
-    <div class="underline">
-    </div>
-    <div class="icon_wrapper">
-      <img src="../img/contact.svg" alt="sending">
-    </div>
-    <form action="../labor_nr_156921_nr_1.php" method="get" id="form-contact">
-      <div class="name">
-        <label for="name"></label>
-        <input type="text" placeholder="Imię i nazwisko" name="name" id="name_input" required>
-      </div>
-      <div class="email">
-        <label for="email"></label>
-        <input type="email" placeholder="E-mail" name="email" id="email_input" required>
-      </div>
-      <div class="subject">
-        <label for="subject"></label>
-        <input type="text" placeholder="Temat" name="subject" id="subject_input" required>
-      </div>
-      <div class="message">
-        <label for="message"></label>
-        <textarea name="message" placeholder="Komentarz/Problem" id="message_input" cols="30" rows="5"
-          required></textarea>
-      </div>
-      <div>
-        <input type="submit" value="Wyślij" class="form_button" />
-        <input type="button" value="Wyczyść" class="form_button" onclick="clearForm()" />
-      </div>
-    </form>
+  <div class="icon_wrapper">
+    <img src="./img/contact.svg" alt="sending">
   </div>
-  <!-- End contact form -->
-  <!--  FOOTER START -->
-  <div class="footer">
-    <div class="inner-footer">
-      <!--  container1 -->
-      <div class="footer-items">
-        <h1>Sierściuchy</h1>
-        <p>Koty towarzyszą człowiekowi od tysięcy lat. Obecnie można spotkać koty dzikie i domowe. Zamieszkują one
-          praktycznie cały świat </p>
-      </div>
-      <!--  container2 -->
-      <div class="footer-items">
-        <h3>Na skróty</h3>
-        <div class="border1"></div>
-        <ul>
-          <a href="./index.html">
-            <li>Start</li>
-          </a>
-          <a href="./html/rasy.html">
-            <li>Rasy</li>
-          </a>
-          <a href="./html/dieta.html">
-            <li>Żywienie</li>
-          </a>
-          <a href="./html/kontakt.html">
-            <li>Kontakt</li>
-          </a>
-        </ul>
-      </div>
-      <!--  container3 -->
-      <div class="footer-items">
-        <h3>Przydatne linki</h3>
-        <div class="border1"></div>
-        <ul>
-          <a href="https://blog.kocibehawioryzm.pl">
-            <li>Kocibehawioryzm</li>
-          </a>
-          <a href="https://www.koty.pl/artykuly/zycie-z-kotem/ksiazki-o-kotach">
-            <li>Książki</li>
-          </a>
-          <a href="https://www.zooplus.pl">
-            <li>Zooplus</li>
-          </a>
-          <a href="https://zooart.com.pl">
-            <li>Zooart</li>
-          </a>
-        </ul>
-      </div>
-      <!--  container4 -->
-      <div class="footer-items">
-        <h3>Kontakt</h3>
-        <div class="border1"></div>
-        <ul>
-          <li><i class="fa fa-map-marker-alt" aria-hidden="true"></i>Olsztyn, ul. Nowa</li>
-          <li><i class="fa fa-phone" aria-hidden="true"></i>+48 123456789</li>
-          <li><i class="fa fa-envelope" aria-hidden="true"></i>123@email.com</li>
-        </ul>
-        <!--   for social links -->
-        <div class="social-media">
-          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-          <a href="https://pl-pl.facebook.com"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.google.com/intl/pl/gmail/about/"><i class="fab fa-google-plus-square"></i></a>
-        </div>
-      </div>
+  <form action="./labor_nr_156921_nr_1.php" method="get" id="form-contact">
+    <div class="name">
+      <label for="name"></label>
+      <input type="text" placeholder="Imię i nazwisko" name="name" id="name_input" required>
     </div>
-    <div class="footer-bottom">
-      Copyright &copy; Sierściuchy 2022.
+    <div class="email">
+      <label for="email"></label>
+      <input type="email" placeholder="E-mail" name="email" id="email_input" required>
     </div>
-  </div>
-  <!--   FOOTER END -->
-  <script src="../js/script.js"></script>
-</body>
-
-</html>
+    <div class="subject">
+      <label for="subject"></label>
+      <input type="text" placeholder="Temat" name="subject" id="subject_input" required>
+    </div>
+    <div class="message">
+      <label for="message"></label>
+      <textarea name="message" placeholder="Komentarz/Problem" id="message_input" cols="30" rows="5"
+        required></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Wyślij" class="form_button" />
+      <input type="button" value="Wyczyść" class="form_button" onclick="clearForm()" />
+    </div>
+  </form>
+</div>
+<!-- End contact form -->
