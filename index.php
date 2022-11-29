@@ -1,38 +1,8 @@
 <?php
  error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
  /* po tym komentarzu będzie kod do dynamicznego ładowania stron */
-
- switch ($_GET['idp']) {
-  case "glowna":
-    $page = './html/glowna.html';
-    break;
-  case "rasy":
-    $page = './html/rasy.html';
-    break;
-  case "galeria":
-    $page = './html/galeria.html';
-    break;
-  case "dieta":
-    $page = './html/dieta.html';
-    break;
-  case "etapy":
-    $page = './html/etapy.html';
-    break;
-  case "filmy":
-    $page = './html/filmy.html';
-    break;
-  case "kontakt":
-    $page = './html/kontakt.html';
-    break;
-  default:
-    $page = '';
-}
-  if (file_exists($page)) {
-    include $page;
-  }
-  else {
-    echo "The file $page does not exist";
-  }
+ include './showpage.php';
+ PokazPodstrone($_GET['idp']);
 ?>
 
 <!DOCTYPE html>
@@ -53,13 +23,13 @@
   <!-- START NAVBAR -->
   <nav class="zone gradient sticky">
     <ul class="main-nav">
-      <li><a href="./index.php?idp=glowna">Start</a></li>
-      <li><a href="./index.php?idp=rasy">Rasy</a></li>
-      <li><a href="./index.php?idp=galeria">Galeria</a></li>
-      <li><a href="./index.php?idp=dieta">Żywienie</a></li>
-      <li><a href="./index.php?idp=etapy">Etapy życia</a></li>
-      <li><a href="./index.php?idp=filmy">Filmy</a></li>
-      <li class="push"><a href="./index.php?idp=kontakt">Kontakt</a></li>
+      <li><a href="./index.php?idp=1">Start</a></li>
+      <li><a href="./index.php?idp=2">Rasy</a></li>
+      <li><a href="./index.php?idp=3">Galeria</a></li>
+      <li><a href="./index.php?idp=4">Żywienie</a></li>
+      <li><a href="./index.php?idp=5">Etapy życia</a></li>
+      <li><a href="./index.php?idp=6">Filmy</a></li>
+      <li class="push"><a href="./index.php?idp=7">Kontakt</a></li>
     </ul>
   </nav>
   <!--END NAVBAR -->
@@ -79,16 +49,16 @@
         <h3>Na skróty</h3>
         <div class="border1"></div>
         <ul>
-          <a href="./index.php?idp=glowna">
+          <a href="./index.php?idp=1">
             <li>Start</li>
           </a>
-          <a href="./index.php?idp=rasy">
+          <a href="./index.php?idp=2">
             <li>Rasy</li>
           </a>
-          <a href="./index.php?idp=dieta">
+          <a href="./index.php?idp=4">
             <li>Żywienie</li>
           </a>
-          <a href="./index.php?idp=kontakt">
+          <a href="./index.php?idp=7">
             <li>Kontakt</li>
           </a>
         </ul>
